@@ -28,8 +28,12 @@ class HomeFragment : Fragment() {
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
+        init(homeViewModel)
         return root
+    }
+    private fun init(viewModel: HomeViewModel){
+        viewModel.getMp3Data()
+
     }
     override fun onDestroyView() {
         super.onDestroyView()

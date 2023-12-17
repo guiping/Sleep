@@ -1,13 +1,13 @@
 package com.anshui.sleep.ui.home
 
-import androidx.lifecycle.LiveData
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
+import com.anshui.sleep.R
 import com.anshui.sleep.ui.home.entity.TagModel
 import com.anshui.sleep.ui.home.entity.Tags
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
+import java.lang.reflect.Field
+
 
 class HomeViewModel : ViewModel() {
 
@@ -15,6 +15,12 @@ class HomeViewModel : ViewModel() {
 
     fun geTagList() {
         tagListEntity.postValue(Tags.TAG_LIST)
+    }
+
+    //获取音频数据并且组装起来
+    fun getMp3Data() {
+
+
     }
 
 }
